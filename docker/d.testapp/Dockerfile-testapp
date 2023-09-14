@@ -1,0 +1,8 @@
+FROM debian:12.1
+
+RUN apt update && apt install -y \
+    vim \
+    build-essential \
+    make
+
+CMD make -C /usr/src/testapp/build && tail -f /dev/null
